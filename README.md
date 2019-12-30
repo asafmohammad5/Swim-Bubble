@@ -11,3 +11,42 @@ The player gets 3 lives when the game starts. He/She must click on the screen in
 * Javascript
 * Canvas
 * HTML/CSS
+
+
+## Wireframes
+* Swimmer (the player)
+* Water (canvas)
+* Air bubbles
+* Small air bubbles (background purposes)
+* Number of lives
+* Fish and/or kelp+coral (background purposes)
+
+
+## Implementation Timeline
+
+Day 1
+* Come up with a game idea
+* Create Repository
+* Complete README (Project proposal)
+* Setup folder structure for the game
+* At minimum, get canvas element to appear on the page.
+* Brainstorm how game should flow/function
+
+Day 2
+* Get Swimmer to appear on canvas
+* Have Swimmer respond to clicks and none-clicks (Moving up and down)
+* Make game end if swimmer falls of canvas
+* Have air bubbles appear on the screen
+* Implement generation of air bubbles and have them transition (moving from right to left) on the canvas
+
+Day 3
+* Finish air bubble logic and implementation
+* Implement lives for the Swimmer
+* Have a start/stop button
+* Implement a score system
+
+### Bonus
+* Have difficulty increase after a certain amount of time
+* Have fish, small air bubbles, and/or coral+kelp appear in the background for asthetic purposes.
+
+
