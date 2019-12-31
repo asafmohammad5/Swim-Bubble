@@ -8,7 +8,6 @@ const CONSTANTS = {
 export default class Swimmer {
   constructor(dimensions) {
     this.speed = CONSTANTS.PULL;
-    console.log(this.speed)
     this.dimensions = dimensions;
     this.y = this.dimensions.height / 2.2;
     this.x = this.dimensions.width / 4;
