@@ -24,17 +24,20 @@ export default class SwimBubble{
     this.swimmer.frame(this.ctx);
     
     if (this.level.gotBubble(this.swimmer.swimmerBoundaries()) === -1 ) {
-      alert('you lose')
+      alert('you lose');
       this.begin();
     } else if (this.lives === 0) {
-      alert('you lose')
+      alert('you lose');
       this.lives = 3;
       this.begin();
     } else if (this.level.gotBubble(this.swimmer.swimmerBoundaries()) === false ) {
       this.lives = this.lives - 1
     }
     if (this.playing) {
-      requestAnimationFrame(this.frame.bind(this));
+      if (this.animationFrame) {
+        cancelAnimationFrame(this.animationFrame)
+      }
+      this.animationFrame = requestAnimationFrame(this.frame.bind(this));  
     }
   }
 

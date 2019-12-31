@@ -48,13 +48,12 @@ export default class Level {
     ctx.font = "bold 22px Arial";
     ctx.fillText(`Score: ${this.score}`, (this.dimensions.width / 1.15), (this.dimensions.height / 20));
     this.drawBubble(ctx);
-    
+   
   }
 
   moveBubble() {
     for (let i = 0; i < this.bubbles.length; i++) {
       const bubble = this.bubbles[i];
-
       if (bubble.x < 0 - CONSTANTS.BUBBLE_WIDTH) {
         let endBubble = this.bubbles.shift();
         endBubble.x = this.bubbles[1].x + CONSTANTS.BUBBLE_DISTANCE*1.8;
