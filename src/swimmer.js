@@ -1,16 +1,17 @@
 const CONSTANTS = {
-  PULL: 0.5,
+  PULL: .016,
   SWIMMER_HEIGHT: 35,
-  SWIMMER_WIDTH: 45
+  SWIMMER_WIDTH: 45,
+  SWIM_SPEED: -1.7
   
 };
 
 export default class Swimmer {
   constructor(dimensions) {
-    this.speed = 0;
+    this.speed = CONSTANTS.PULL;
     this.dimensions = dimensions;
-    this.y = this.dimensions.height / 2.1;
-    this.x = this.dimensions.width / 3;
+    this.y = this.dimensions.height / 2.2;
+    this.x = this.dimensions.width / 4;
   }
 
   drawSwimmer(ctx) {
@@ -19,7 +20,17 @@ export default class Swimmer {
   }
 
   frame(ctx) {
+    this.move();
     this.drawSwimmer(ctx)
   }
+
+  move () {
+    this.y += this.speed;
+    this.speed += CONSTANTS.PULL
+  }
+
+  swim() {
+    this.speed = CONSTANTS.SWIM_SPEED;
+  };
 
 }
