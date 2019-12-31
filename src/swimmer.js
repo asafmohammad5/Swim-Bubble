@@ -3,7 +3,6 @@ const CONSTANTS = {
   SWIMMER_HEIGHT: 35,
   SWIMMER_WIDTH: 45,
   SWIM_SPEED: -1.7
-  
 };
 
 export default class Swimmer {
@@ -12,6 +11,12 @@ export default class Swimmer {
     this.dimensions = dimensions;
     this.y = this.dimensions.height / 2.2;
     this.x = this.dimensions.width / 4;
+  }
+
+  swimmerBoundaries() {
+    const leftCornerTop = [this.x, this.y];
+    const rightCornerBottom = [this.x + CONSTANTS.SWIMMER_WIDTH, this.y + CONSTANTS.SWIMMER_HEIGHT]
+    return { tLeft: leftCornerTop, bRight: rightCornerBottom  };
   }
 
   drawSwimmer(ctx) {
