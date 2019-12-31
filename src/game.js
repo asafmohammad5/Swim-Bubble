@@ -18,7 +18,11 @@ export default class SwimBubble{
 
   frame () {
     this.level.frame(this.ctx);
+    this.ctx.fillStyle = "white";
+    this.ctx.font = "bold 23px Arial";
+    this.ctx.fillText(`Breathe: ${this.lives}`, (this.dimensions.width / 33), (this.dimensions.height / 20));
     this.swimmer.frame(this.ctx);
+    
     if (this.level.gotBubble(this.swimmer.swimmerBoundaries()) === -1 ) {
       alert('you lose')
       this.begin();
