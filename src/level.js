@@ -70,16 +70,17 @@ export default class Level {
       if (bubble.x < this.dimensions.width) {
         ctx.beginPath()
         ctx.arc(bubble.x, bubble.y, CONSTANTS.BUBBLE_WIDTH, 0, 2 * Math.PI);
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = `rgba(0, 0, 0, 0)`;
         ctx.fill();
+        ctx.strokeStyle = `#FFFFFF`;
         ctx.stroke();
-      }
+       }
     }
   };
 
   bubblePosition() {
     let num = Math.floor(Math.random() * 800);
-    while (num < 100 || num > 745) {
+    while (num < 100 || num > 740) {
       num = Math.floor(Math.random() * 800);
     }
     return num;

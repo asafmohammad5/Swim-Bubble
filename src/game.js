@@ -25,6 +25,7 @@ export default class SwimBubble{
     
     if (this.level.gotBubble(this.swimmer.swimmerBoundaries()) === -1 ) {
       alert('you lose');
+      this.lives = 3
       this.begin();
     } else if (this.lives === 0) {
       alert('you lose');
