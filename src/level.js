@@ -8,6 +8,8 @@ export default class Level {
   constructor(dimensions) {
     this.dimensions = dimensions;
     this.score = 0;
+    this.coral = new Image();
+    this.coral.src = './assets/images/coral.png'
     this.bubbles = [ { x: (CONSTANTS.BUBBLE_DISTANCE * 4), y: this.bubblePosition() },
       { x: (CONSTANTS.BUBBLE_DISTANCE * 5), y: this.bubblePosition() },
       { x: (CONSTANTS.BUBBLE_DISTANCE * 6), y: this.bubblePosition() } ];
@@ -20,7 +22,7 @@ export default class Level {
       this.score += 25;
     } else if (bubble.x + (this.dimensions.width/4) + 28 < bounds.tLeft[0]) {
       return false;
-    } else if (bounds.bRight[1] <= 20 || bounds.bRight[1] >= 778) {
+    } else if (bounds.bRight[1] <= 20 || bounds.bRight[1] >= 740) {
       return -1
     }
   };
@@ -38,6 +40,77 @@ export default class Level {
     grd.addColorStop(1, "white");
     ctx.fillStyle = grd;
     ctx.fillRect(0, 0, this.dimensions.width, this.dimensions.height);
+    ctx.clearRect(0, 0, 0, 0);
+    ctx.drawImage(
+      this.coral,
+      0,
+      700,
+      100,
+      100
+    );
+    ctx.drawImage(
+      this.coral,
+      100,
+      700,
+      100,
+      100
+    );
+    ctx.drawImage(
+      this.coral,
+      200,
+      700,
+      100,
+      100
+    );
+    ctx.drawImage(
+      this.coral,
+      300,
+      700,
+      100,
+      100
+    ); 
+    ctx.drawImage(
+      this.coral,
+      400,
+      700,
+      100,
+      100
+    );
+    ctx.drawImage(
+      this.coral,
+      500,
+      700,
+      100,
+      100
+    );
+    ctx.drawImage(
+      this.coral,
+      600,
+      700,
+      100,
+      100
+    );
+    ctx.drawImage(
+      this.coral,
+      700,
+      700,
+      100,
+      100
+    );
+    ctx.drawImage(
+      this.coral,
+      800,
+      700,
+      100,
+      100
+    );
+    ctx.drawImage(
+      this.coral,
+      900,
+      700,
+      100,
+      100
+    );
   }
 
   frame(ctx) {
@@ -80,7 +153,7 @@ export default class Level {
 
   bubblePosition() {
     let num = Math.floor(Math.random() * 800);
-    while (num < 100 || num > 740) {
+    while (num < 100 || num > 702) {
       num = Math.floor(Math.random() * 800);
     }
     return num;

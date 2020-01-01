@@ -1,7 +1,7 @@
 const CONSTANTS = {
   PULL: .016,
-  SWIMMER_HEIGHT: 35,
-  SWIMMER_WIDTH: 45,
+  SWIMMER_HEIGHT: 60,
+  SWIMMER_WIDTH: 60,
   SWIM_SPEED: -1.7
 };
 
@@ -11,6 +11,8 @@ export default class Swimmer {
     this.dimensions = dimensions;
     this.y = this.dimensions.height / 2.2;
     this.x = this.dimensions.width / 4;
+    this.swimmer = new Image();
+    this.swimmer.src = './assets/images/dolphin.png';
   }
 
   swimmerBoundaries() {
@@ -20,8 +22,15 @@ export default class Swimmer {
   }
 
   drawSwimmer(ctx) {
-    ctx.fillStyle = "black";
-    ctx.fillRect(this.x, this.y, CONSTANTS.SWIMMER_WIDTH, CONSTANTS.SWIMMER_HEIGHT)
+    ctx.clearRect(0, 0, 0, 0);
+    ctx.drawImage(
+      this.swimmer,
+      this.x,
+      this.y,
+      80,
+      80
+    );
+
   }
 
   frame(ctx) {
