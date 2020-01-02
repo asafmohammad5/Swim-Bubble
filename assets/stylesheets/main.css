@@ -4,10 +4,80 @@
 
 .main-title {
   margin-top: -8px;
-  height: 20px
+  height: 20px;
 }
 
-/* .game-button {
+.game-button {
   position: absolute;
-  top: 100px;
-} */
+  top: 170px;
+  left: 390px;
+  height: 500px;
+  width: 650px;
+  background-color: rgb(143, 182, 236);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.github:hover {
+  color: rgb(88, 112, 192);
+}
+
+.game-button-button {
+  margin-top: 10px;
+  margin-bottom: 22px;
+  background-color: rgb(100, 123, 187);
+  cursor: pointer;
+  font-size: 15px;
+  color: rgb(244, 247, 250);
+}
+
+.game-button-button:hover {
+ background-color: rgb(151, 165, 207);
+}
+
+.game-about-outer {
+  margin: 10px;
+  padding: 0px 10px;
+  border: 1px solid #1a2e5d;
+  border-radius: 2px;
+}
+
+.game-about-header {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.game-restart {
+  position: absolute;
+  top: 270px;
+  left: 515px;
+  height: 200px;
+  width: 400px;
+  background-color: rgb(143, 182, 236);
+  border-radius: 3px;
+  text-align: center;
+  border: 2px solid rgb(92, 90, 90);
+}
+
+.game-button-button-1 {
+  margin-top: 20px;
+  margin-bottom: 22px;
+  background-color: rgb(100, 123, 187);
+  cursor: pointer;
+  font-size: 15px;
+  color: rgb(244, 247, 250);
+}
+
+.game-button-button-1:hover {
+ background-color: rgb(151, 165, 207);
+}
+
+
+.hidden {
+  display: none;
+}
+
+p {
+  margin: 25px;
+  font-size: 22px;
+}
