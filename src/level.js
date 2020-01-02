@@ -45,7 +45,6 @@ export default class Level {
     grd.addColorStop(1, "white");
     ctx.fillStyle = grd;
     ctx.fillRect(0, 0, this.dimensions.width, this.dimensions.height);
-    ctx.clearRect(0, 0, 0, 0);
     ctx.drawImage(
       this.coral,
       0,
