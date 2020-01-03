@@ -18,12 +18,14 @@ export default class Level {
       { x: (this.bubblePositionX()), y: this.dimensions.height + this.bubblePositionY() }, 
       { x: (this.bubblePositionX()), y: this.dimensions.height + this.bubblePositionY()},
       { x: (this.bubblePositionX()), y: this.dimensions.height + this.bubblePositionY() } ];
+      this.sound();
   };
 
   gotBubble(bounds) {
     let bubble = this.bubbles[0];
     if (bubble.x >= bounds.tLeft[0] - 25 && bubble.x <= bounds.bRight[0] + 25 && bubble.y >= bounds.tLeft[1] - 25 && bubble.y <= bounds.bRight[1] + 25) {
       this.removeBubble();
+      this.scoreBubble.play();
       this.score += 25;
     } else if (bubble.x + (this.dimensions.width/4) + 28 < bounds.tLeft[0]) {
       return false;
@@ -182,6 +184,10 @@ export default class Level {
       }
     }
   };
+
+  sound() {
+    this.scoreBubble = new Audio('./assets/sounds/got-bubble.wav');
+  }
 
   bubblePosition() {
     let num = Math.floor(Math.random() * 800);
