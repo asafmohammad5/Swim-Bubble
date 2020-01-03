@@ -1,6 +1,6 @@
 const CONSTANTS = {
-  BUBBLE_SPEED: -1,
-  BUBBLE_DISTANCE: 270,
+  BUBBLE_SPEED: [-1, -1.3, -1.5, -1.8, -2, -2.15],
+  BUBBLE_DISTANCE: 280,
   BUBBLE_WIDTH: 28
 }
 
@@ -29,7 +29,7 @@ export default class Level {
       this.score += 25;
     } else if (bubble.x + (this.dimensions.width/4) + 28 < bounds.tLeft[0]) {
       return false;
-    } else if (bounds.bRight[1] <= 20 || bounds.bRight[1] >= 740) {
+    } else if (bounds.bRight[1] <= 48 || bounds.bRight[1] >= 740) {
       return -1
     }
   };
@@ -140,8 +140,20 @@ export default class Level {
         endBubble.y = this.bubblePosition();
         this.bubbles.push(endBubble);
       }
-      bubble.x += CONSTANTS.BUBBLE_SPEED;
-    }
+      if (this.score <= 125) {
+        bubble.x += CONSTANTS.BUBBLE_SPEED[0];
+      } else if (this.score <= 250) {
+        bubble.x += CONSTANTS.BUBBLE_SPEED[1];
+      } else if (this.score <= 475) {
+        bubble.x += CONSTANTS.BUBBLE_SPEED[2];
+      } else if (this.score <= 800){
+        bubble.x += CONSTANTS.BUBBLE_SPEED[3];
+      } else if (this.score <= 1200){
+        bubble.x += CONSTANTS.BUBBLE_SPEED[4];
+      } else {
+        bubble.x += CONSTANTS.BUBBLE_SPEED[5];
+      }
+    } 
   };
 
   moveBubbles() {
@@ -153,7 +165,7 @@ export default class Level {
         endBubble.x = this.bubblePositionX();
         this.smallBubbles.push(endBubble);
       }
-      bubble.y += CONSTANTS.BUBBLE_SPEED * 2.5;
+      bubble.y += CONSTANTS.BUBBLE_SPEED[0] * 2.5;
     }
   };
 
@@ -191,7 +203,7 @@ export default class Level {
 
   bubblePosition() {
     let num = Math.floor(Math.random() * 800);
-    while (num < 100 || num > 702) {
+    while (num < 100 || num > 687) {
       num = Math.floor(Math.random() * 800);
     }
     return num;
