@@ -72,6 +72,43 @@
  background-color: rgb(151, 165, 207);
 }
 
+.music-button {
+  position: absolute;
+  top: 98px;
+  left: 251px;
+  z-index: 3;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: rgb(103, 5, 151);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.music-button:hover {
+  color: rgb(184, 93, 230);
+}
+
+.muted {
+  text-decoration: line-through;
+  position: absolute;
+  top: 98px;
+  left: 251px;
+  z-index: 3;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: rgb(103, 5, 151);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.muted:hover {
+  color: rgb(184, 93, 230);
+}
+
 
 .hidden {
   display: none;
