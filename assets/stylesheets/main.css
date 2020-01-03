@@ -109,6 +109,44 @@
   color: rgb(184, 93, 230);
 }
 
+.pause-button {
+  position: absolute;
+  top: 98px;
+  left: 312px;
+  z-index: 3;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: rgb(103, 5, 151);
+  font-weight: bold;
+  font-size: 19px;
+  border: 2.5px solid purple;
+  border-radius: 4px;
+}
+
+.paused {
+  text-decoration: line-through;
+  position: absolute;
+  top: 98px;
+  left: 312px;
+  z-index: 3;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: rgb(103, 5, 151);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.pause-button:hover {
+  color: rgb(184, 93, 230);
+}
+
+.paused:hover {
+  color: rgb(184, 93, 230);
+}
 
 .hidden {
   display: none;
