@@ -2,9 +2,17 @@
   text-align: center;
 }
 
+.body-1 {
+  background: rgb(34,78,195);
+  background: linear-gradient(0deg, rgba(34,78,195,1) 22%, rgba(45,154,253,1) 99%);
+  background-size: 110%;  
+ }
+
 .main-title {
   margin-top: -8px;
   height: 20px;
+  font-family: 'Bungee Shade', cursive;
+  color: rgb(212, 227, 227);
 }
 
 .game-button {
@@ -16,6 +24,7 @@
   background-color: rgb(143, 182, 236);
   border-radius: 3px;
   text-align: center;
+  font-family: 'Roboto Slab', serif;
 }
 
 .github:hover {
@@ -29,6 +38,7 @@
   cursor: pointer;
   font-size: 15px;
   color: rgb(244, 247, 250);
+  font-family: 'Roboto Slab', serif;
 }
 
 .game-button-button:hover {
@@ -40,11 +50,13 @@
   padding: 0px 10px;
   border: 1px solid #1a2e5d;
   border-radius: 2px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .game-about-header {
   margin-top: 10px;
   text-align: center;
+  font-family: 'Roboto Slab', serif;
 }
 
 .game-restart {
@@ -57,6 +69,7 @@
   border-radius: 3px;
   text-align: center;
   border: 2px solid rgb(92, 90, 90);
+  font-family: 'Roboto Slab', serif;
 }
 
 .game-button-button-1 {
@@ -66,6 +79,7 @@
   cursor: pointer;
   font-size: 15px;
   color: rgb(244, 247, 250);
+  font-family: 'Roboto Slab', serif;
 }
 
 .game-button-button-1:hover {
@@ -84,6 +98,7 @@
   color: rgb(103, 5, 151);
   font-weight: bold;
   font-size: 16px;
+  font-family: 'Roboto Slab', serif;  
 }
 
 .music-button:hover {
@@ -103,6 +118,7 @@
   color: rgb(103, 5, 151);
   font-weight: bold;
   font-size: 16px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .muted:hover {
@@ -123,6 +139,7 @@
   font-size: 19px;
   border: 2.5px solid purple;
   border-radius: 4px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .paused {
@@ -138,6 +155,7 @@
   color: rgb(103, 5, 151);
   font-weight: bold;
   font-size: 16px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .pause-button:hover {
@@ -154,5 +172,5 @@
 
 p {
   margin: 25px;
-  font-size: 22px;
+  font-size: 19px;
 }

@@ -1,5 +1,5 @@
 const CONSTANTS = {
-  BUBBLE_SPEED: [-1, -1.3, -1.5, -1.8, -2, -2.15],
+  BUBBLE_SPEED: [-1, -1.3, -1.5, -1.8, -2, -2.10],
   BUBBLE_DISTANCE: 280,
   BUBBLE_WIDTH: 28
 }
