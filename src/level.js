@@ -9,7 +9,7 @@ export default class Level {
     this.dimensions = dimensions;
     this.score = 0;
     this.coral = new Image();
-    this.coral.src = './assets/images/coral.png'
+    this.coral.src = './assets/images/coral.png';
     this.bubbles = [ { x: (CONSTANTS.BUBBLE_DISTANCE * 4), y: this.bubblePosition() },
       { x: (CONSTANTS.BUBBLE_DISTANCE * 5), y: this.bubblePosition() },
       { x: (CONSTANTS.BUBBLE_DISTANCE * 6), y: this.bubblePosition() } ];

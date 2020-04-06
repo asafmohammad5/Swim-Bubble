@@ -14,6 +14,7 @@ export default class SwimBubble{
     this.begin = this.begin.bind(this);
     this.muteToggle = this.muteToggle.bind(this);
     this.pauseToggle = this.pauseToggle.bind(this);
+    // this.directions = document.getElementById('directions');
     this.gameAbout = document.getElementById('game-about');
     this.gameRestart = document.getElementById('game-restart');
     const gameButton = document.getElementById('game-button');
@@ -27,6 +28,7 @@ export default class SwimBubble{
       this.start();
       this.gameAbout.className = 'hidden';
       this.pauseDiv.className = "";
+      // this.directions.className = "";
     })
     restartButton.addEventListener('click', (e) => {
       this.select.play();

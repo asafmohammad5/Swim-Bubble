@@ -1,5 +1,10 @@
 .main-page {
+  height: 50%;
   text-align: center;
+}
+
+.canvas {
+  margin-bottom: 5px;
 }
 
 .body-1 {
@@ -170,9 +175,20 @@
   display: none;
 }
 
+.directions-text-hidden {
+  visibility: hidden;
+}
+
 p {
-  margin: 25px;
-  font-size: 19px;
+  margin: 27px;
+  font-size: 21px;
+}
+
+.directions-text {
+  color: whitesmoke;
+  font-weight: bold;
+  font-style: 22px;
+  display: inline;
 }
 
 @media only screen and (max-width: 550px) {
