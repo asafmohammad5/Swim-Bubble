@@ -15,12 +15,14 @@
   <div class="main-page">
     <h1 class="main-title">Swim Bubble</h1>
 
-    <canvas class="canvas" id="game" height="743" width="1000"></canvas>
+    <canvas class="canvas" id="game" height="743" width="1000">
+      <div><button class="music-button" id="mute-button">Music</button></div>
+      <div class="hidden" id="pause-div"><button class="paused" id="pause-button">Paused</button></div>
+    </canvas>
 
       <div class="" id="directions">
-        <p class="directions-text">To move up: LEFT CLICK</p>  <p class="directions-text">To move down: DON'T CLICK</p>
+        <p class="directions-text">Move up: LEFT CLICK</p>  <p class="directions-text">Move down: DON'T CLICK</p>
       </div>
-
   </div>
 
   <div class="game-button" id="game-about">
@@ -41,8 +43,7 @@
     </section>
   </div>
 
-  <div><button class="music-button" id="mute-button">Music</button></div>
-  <div class="hidden" id="pause-div"><button class="paused" id="pause-button">Paused</button></div>
+  
 
   <div class="hidden" id="game-restart">
     <p class="another-try">Great job! Give it another shot?</p>
