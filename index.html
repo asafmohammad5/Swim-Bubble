@@ -11,38 +11,44 @@
 </head>
 
 <body class="body-1">
- 
   <div class="main-page">
+
     <h1 class="main-title">Swim Bubble</h1>
 
-    <canvas class="canvas" id="game" height="743" width="1000"></canvas>
+    <div class="middle">
+        <div class="buttons">
+          <button class="music-button" id="mute-button">Music</button>
+          <div class="hidden" id="pause-div"><button class="paused" id="pause-button">Paused</button></div>
+        </div>
+       
+      <canvas class="canvas" id="game" height="743" width="1000"></canvas>
+    
+      <div class="game-button" id="game-about">
+        <section class="game-about-outer">
+          <h2 class="game-about-header">Welcome</h2>
+          <p>Swim Bubble was inspired by the well known game Flappy Bird, which was created
+            by Dong Nguyen in 2013.
+          </p>
+          <p>Swim Bubble was created by Asaf Mohammad. The source code for this game can be found at
+            <a class="github" href="https://github.com/asafmohammad5/Swim-Bubble">Github</a>.
+          </p>
+          <h2>How to Play</h2>
+          <p>The player needs to get the big air bubbles in order to stay alive. By
+            left clicking with the mouse the dolphin will move up and not clicking at all the dolphin will
+            begin to drop. Avoid the red coral at the bottom, don't swim too far up, and don't run out of breath!</p>
+          <button class="game-button-button" id="game-button">Start Game</button>
+        </section>
+      </div>
+    </div>
+    
 
       <div class="" id="directions">
         <p class="directions-text">Move up: LEFT CLICK</p>  <p class="directions-text">Move down: DON'T CLICK</p>
       </div>
+
   </div>
 
-  <div class="game-button" id="game-about">
-   
-    <section class="game-about-outer">
-      <h2 class="game-about-header">Welcome</h2>
-      <p>Swim Bubble was inspired by the well known game Flappy Bird, which was created
-        by Dong Nguyen in 2013. 
-      </p>
-      <p>Swim Bubble was created by Asaf Mohammad. The source code for this game can be found at
-        <a class="github" href="https://github.com/asafmohammad5/Swim-Bubble">Github</a>.
-      </p>
-      <h2>How to Play</h2>
-      <p>The player needs to get the big air bubbles in order to stay alive. By
-        left clicking with the mouse the dolphin will move up and not clicking at all the dolphin will
-        begin to drop. Avoid the red coral at the bottom, don't swim too far up, and don't run out of breath!</p>
-      <button class="game-button-button" id="game-button">Start Game</button>
-    </section>
-  </div>
-
-  <div><button class="music-button" id="mute-button">Music</button></div>
-  <div class="hidden" id="pause-div"><button class="paused" id="pause-button">Paused</button></div>
-
+  
   <div class="hidden" id="game-restart">
     <p class="another-try">Great job! Give it another shot?</p>
     <button class="game-button-button-1" id="game-button-1">Play again</button>

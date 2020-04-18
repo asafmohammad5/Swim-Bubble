@@ -1,6 +1,7 @@
 .main-page {
-  height: 50%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .canvas {
@@ -92,7 +93,8 @@
 }
 
 .music-button {
-  position: absolute;
+  /* position: absolute; */
+  margin-right: 20px;
   top: 98px;
   left: 251px;
   z-index: 3;
@@ -112,7 +114,8 @@
 
 .muted {
   text-decoration: line-through;
-  position: absolute;
+  /* position: absolute; */
+   margin-right: 20px;
   top: 98px;
   left: 251px;
   z-index: 3;
@@ -131,31 +134,31 @@
 }
 
 .pause-button {
-  position: absolute;
-  top: 98px;
-  left: 312px;
+  /* position: absolute; */
+  /* top: 98px;
+  left: 312px; */
   z-index: 3;
   background: none;
   border: none;
-  padding: 4px;
+  /* padding: 4px; */
   cursor: pointer;
   color: rgb(103, 5, 151);
   font-weight: bold;
-  font-size: 19px;
-  border: 2.5px solid purple;
-  border-radius: 4px;
+  font-size: 16px;
+  /* border: 2.5px solid purple; */
+  /* border-radius: 4px; */
   font-family: 'Roboto Slab', serif;
 }
 
 .paused {
   text-decoration: line-through;
-  position: absolute;
-  top: 98px;
-  left: 312px;
+  /* position: absolute; */
+  /* top: 98px;
+  left: 312px; */
   z-index: 3;
   background: none;
   border: none;
-  padding: 0;
+  /* padding: 0; */
   cursor: pointer;
   color: rgb(103, 5, 151);
   font-weight: bold;
@@ -169,6 +172,10 @@
 
 .paused:hover {
   color: rgb(184, 93, 230);
+}
+
+.buttons {
+  display: flex;
 }
 
 .hidden {
@@ -194,21 +201,24 @@ p {
 @media only screen and (max-width: 550px) {
 
   #game {
-    height: 100%;
-    width: 100%;
+      height: 100vh;
+      width: 100vw;
   }
 
   .game-button {
     position: absolute;
-    top: 68px;
-    left: 55px;
-    height: 300px;
-    width: 450px;
+    margin-top: 10%;
+    left: 00%;
+    top: 10vh;
+    height: 350px;
+    width: 100vw;
     background-color: rgb(143, 182, 236);
     border-radius: 3px;
     text-align: center;
     font-family: 'Roboto Slab', serif;
   }
+
+ 
 
   .game-about-header {
     font-size: 16px;
@@ -224,9 +234,9 @@ p {
   }
 
   .music-button {
-   position: absolute;
+   /* position: absolute; */
    top: 75px;
-   left: 24px;
+   left: 20px;
    z-index: 3;
    background: none;
    border: none;
@@ -244,7 +254,7 @@ p {
 
   .muted {
   text-decoration: line-through;
-  position: absolute;
+  /* position: absolute; */
   top: 75px;
   left: 24px;
   z-index: 3;
@@ -263,31 +273,31 @@ p {
 }
 
 .pause-button {
-  position: absolute;
-  top: 75px;
-  left: 63px;
+  /* position: absolute; */
+  /* top: 75px;
+  left: 63px; */
   z-index: 3;
   background: none;
   border: none;
-  padding: 4px;
+  /* padding: 4px; */
   cursor: pointer;
   color: rgb(103, 5, 151);
   font-weight: bold;
   font-size: 11px;
-  border: 2.5px solid purple;
-  border-radius: 4px;
+  /* border: 2.5px solid purple;
+  border-radius: 4px; */
   font-family: 'Roboto Slab', serif;
 }
 
 .paused {
   text-decoration: line-through;
-  position: absolute;
-  top: 75px;
-  left: 63px;
+  /* position: absolute; */
+  /* top: 75px;
+  left: 63px; */
   z-index: 3;
   background: none;
   border: none;
-  padding: 0;
+  /* padding: 0; */
   cursor: pointer;
   color: rgb(103, 5, 151);
   font-weight: bold;
@@ -354,9 +364,9 @@ p {
   }
 
   .music-button {
-   position: absolute;
+   /* position: absolute;
    top: 135px;
-   left: 75px;
+   left: 75px; */
    z-index: 3;
    background: none;
    border: none;
@@ -374,9 +384,9 @@ p {
 
   .muted {
   text-decoration: line-through;
-  position: absolute;
+  /* position: absolute;
   top: 135px;
-  left: 75px;
+  left: 75px; */
   z-index: 3;
   background: none;
   border: none;
@@ -393,31 +403,31 @@ p {
 }
 
 .pause-button {
-  position: absolute;
+  /* position: absolute;
   top: 135px;
-  left: 160px;
+  left: 160px; */
   z-index: 3;
   background: none;
   border: none;
-  padding: 4px;
+  /* padding: 4px; */
   cursor: pointer;
   color: rgb(103, 5, 151);
   font-weight: bold;
   font-size: 25px;
-  border: 2.5px solid purple;
-  border-radius: 4px;
+  /* border: 2.5px solid purple;
+  border-radius: 4px; */
   font-family: 'Roboto Slab', serif;
 }
 
 .paused {
   text-decoration: line-through;
-  position: absolute;
+  /* position: absolute;
   top: 135px;
-  left: 160px;
+  left: 160px; */
   z-index: 3;
   background: none;
   border: none;
-  padding: 0;
+  /* padding: 0; */
   cursor: pointer;
   color: rgb(103, 5, 151);
   font-weight: bold;
