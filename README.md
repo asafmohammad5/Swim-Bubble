@@ -2,7 +2,7 @@
 
 An interactive game where the player must get air bubbles in order to keep themselves from drowning!
 
-[Live Link](https://asafmohammad5.github.io/Swim-Bubble/)
+[Live Link](https://swimbubble.netlify.app/)
 
 
 ## How to play
