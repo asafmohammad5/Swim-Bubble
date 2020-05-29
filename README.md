@@ -25,40 +25,48 @@ The player gets 3 lives when the game starts (extra lives are awarded based on s
 * Coral (background purposes)
 
 
-## Implementation Timeline
+## Game Screenshots
 
-Day 1
-* Come up with a game idea
-* Create Repository
-* Complete README (Project proposal)
-* Setup folder structure for the game
-* At minimum, get canvas element to appear on the page.
-* Brainstorm how game should flow/function
 
-Day 2
-* Get Swimmer to appear on canvas
-* Have Swimmer respond to clicks and none-clicks (Moving up and down)
-* Make game end if swimmer falls of canvas
-* Have air bubbles appear on the screen
-* Implement generation of air bubbles and have them transition (moving from right to left) on the canvas
 
-Day 3
-* Finish air bubble logic and implementation
-* Implement lives for the Swimmer
-* Have a start/pause button
-* Implement a score system
+## Game Sample Code 
 
-Day 4
-* Increase game difficulty as score increases
-* Get smaller air bubbles to function correctly
-* Implement background music and sound effects for various functions, i.e., collecting an air bubble
-
-Day 5
-* Debugging
-* CSS styling for: text, headings, buttons, and html background.
-
-### Bonus
-* Have difficulty increase after a certain amount of time
-* Have fish, small air bubbles, and/or coral+kelp appear in the background for asthetic purposes.
+```
+frame () {
+    this.level.frame(this.ctx);
+    this.ctx.fillStyle = "white";
+    this.ctx.font = "bold 23px Arial";
+    this.ctx.fillText(`Breathe: ${this.lives}`, (this.dimensions.width / 33), (this.dimensions.height / 20));
+    this.swimmer.frame(this.ctx);
+    if (SCORE_ARRAY.includes(this.level.score)) {
+      SCORE_ARRAY.shift();
+      this.addLife();
+    } 
+    
+    if (this.level.gotBubble(this.swimmer.swimmerBoundaries()) === -1 ) {
+      this.playing = false;
+      this.gameMusic.pause();
+      this.gameOver.play();
+      this.pauseDiv.className = 'hidden';
+      this.gameRestart.className = 'game-restart';
+      this.lives = 3
+    } else if (this.lives === 0) {
+      this.playing = false;
+      this.gameMusic.pause();
+      this.gameOver.play();
+      this.pauseDiv.className = 'hidden';
+      this.gameRestart.className = 'game-restart';
+      this.lives = 3
+    } else if (this.level.gotBubble(this.swimmer.swimmerBoundaries()) === false ) {
+      this.lives = this.lives - 1
+    }
+    if (this.playing) {
+      if (this.animationFrame) {
+        cancelAnimationFrame(this.animationFrame)
+      }
+      this.animationFrame = requestAnimationFrame(this.frame.bind(this));  
+    }
+  }
+```
 
 
