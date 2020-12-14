@@ -2,7 +2,7 @@
 
 An interactive game where the player must get air bubbles in order to keep themselves from drowning!
 
-[Live Link](https://asafmohammad5.github.io/Swim-Bubble/)
+[Live Link](https://swimbubble.netlify.app/)
 
 
 ## How to play
@@ -26,7 +26,8 @@ The player gets 3 lives when the game starts (extra lives are awarded based on s
 
 
 ## Game Screenshots
-
+![GitHub Logo](/assets/images/swimbubble-main.png)
+![GitHub Logo](/assets/images/swimbubble-game.png)
 
 
 ## Game Sample Code 
